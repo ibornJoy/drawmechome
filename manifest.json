@@ -1,0 +1,38 @@
+{
+  "name": "DrawMe",
+  "description": "Draw HighChart from okkooo.com.",
+  "version": "1.1",
+  "background": {
+    "scripts": ["tabs.js","background.js"]
+  },
+  "permissions": [
+    "tabs", "http://www.okooo.com/*"
+  ],
+  "browser_action": {
+      "default_title": "DrawMe",
+      "default_icon": "icon.png"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.okooo.com/*"
+      ],
+      "all_frames": true,
+      "js": [
+        "content_script.js"
+      ]
+    }
+  ],
+  
+  "icons": {
+    "16": "icon48.png",
+    "48": "icon48.png",
+    "128": "icon48.png",
+    "256": "icon48.png"
+  },
+  
+  
+  "manifest_version": 2
+}
+
